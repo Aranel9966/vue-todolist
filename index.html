@@ -15,12 +15,12 @@
     
     <div id="app">
         <ul>
-            <li @click="selectTodo(todo)" v-for="(todo,index) in todoList" :class="todoList[index].done ?'active' :''" >{{todoList[index].text}} <span @click="removeTodo(index)"><i class="fa-solid fa-xmark"></i></span></li>
+            <li @click="selectTodo(todo)" v-for="(todo,index) in todoList" :class="todoList[index].done ?'active' :''" >{{todoList[index].text}} <span @click="removeTodo(index)"><i class="fa-solid fa-xmark"></i></span></li> 
         </ul>
 
         <div>
-            <input v-model="newTodo.text" >
-            
+            <input @keyup.enter='keyEnter' v-model="newTodo.text" >
+
             <button @click="addTodo">Aggiungi</button>
         </div>
 

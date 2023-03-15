@@ -70,6 +70,10 @@ const { createApp } = Vue
             this.newTodo={}
         },
         
+        keyEnter(){
+            this.addTodo()
+        }
+        
     },
 
   }).mount('#app')

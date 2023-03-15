@@ -7,3 +7,8 @@
 .active{
     text-decoration: line-through;
 }
+ul{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
