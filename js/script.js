@@ -44,7 +44,7 @@ const { createApp } = Vue
             },
         ],
 
-        indexTodo:0
+        // indexTodo:0
 
       }
     },
@@ -55,7 +55,13 @@ const { createApp } = Vue
             }else{
                 indexSelect.done=true
             }
-        }
+        },
+
+        removeTodo(indexTodo){
+            this.todoList.splice(indexTodo,1)
+            console.log(indexTodo)
+            console.log(this.todoList)
+        },
         
     },
 
