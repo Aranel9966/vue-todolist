@@ -13,7 +13,7 @@
     
     <div id="app">
         <ul>
-            <li v-for="(todo,index) in todoList" >{{todoList[index].text}}</li>
+            <li @click="selectTodo(todo)" v-for="(todo,index) in todoList" :class="todoList[index].done ?'active' :''" >{{todoList[index].text}}</li>
         </ul>
 
 

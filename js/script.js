@@ -43,12 +43,19 @@ const { createApp } = Vue
                 done:false
             },
         ],
-        
+
         indexTodo:0
 
       }
     },
     methods: {
+        selectTodo(indexSelect){
+            if(indexSelect.done == true){
+                indexSelect.done=false
+            }else{
+                indexSelect.done=true
+            }
+        }
         
     },
 
