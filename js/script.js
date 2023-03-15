@@ -52,9 +52,10 @@ const { createApp } = Vue
 
       }
     },
+    
     methods: {
         selectTodo(indexSelect){
-            if(indexSelect.done == true){
+            if(indexSelect.done ===  true){
                 indexSelect.done=false
             }else{
                 indexSelect.done=true
@@ -69,7 +70,7 @@ const { createApp } = Vue
             this.todoList.push(this.newTodo)
             this.newTodo={}
         },
-        
+
         keyEnter(){
             this.addTodo()
         }
