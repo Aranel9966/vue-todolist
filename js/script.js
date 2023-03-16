@@ -24,32 +24,29 @@ const { createApp } = Vue
       return {
         todoList:[
             {
-                text:'mele',
+                text:'andare a fare la spesa',
                 done:false
             },
             {
-                text:'pere',
+                text:'lavare la macchina',
                 done:false
             },
             {
-                text:'banane',
+                text:'pagare le bollette',
                 done:false
             },
             {
-                text:'arance',
+                text:'finire il progetto ',
                 done:false
             },
-            {
-                text:'pesche',
-                done:false
-            },
+            
         ],
 
         newTodo:{
             text:'',
             done:false,
         },
-
+        
       }
     },
     
@@ -67,8 +64,16 @@ const { createApp } = Vue
         },
 
         addTodo(){
-            this.todoList.push(this.newTodo)
-            this.newTodo={}
+            if(this.newTodo.text==''){
+
+            }else{
+
+                this.todoList.push(this.newTodo)
+                this.newTodo={
+                    text: '',
+                    done: false
+                }
+            }
         },
 
         keyEnter(){
